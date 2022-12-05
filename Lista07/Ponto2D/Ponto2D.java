@@ -12,7 +12,9 @@ public class Ponto2D {
     public Ponto2D(Ponto2D p){
         this(p.getX(),p.getY());
     }
-
+    public String toString(){
+        return "x:"+Float.toString(x)+" y:"+Float.toString(y);
+    }
 
     public float getX(){
         return this.x;
