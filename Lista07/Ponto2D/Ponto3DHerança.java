@@ -5,6 +5,7 @@ public class Ponto3DHerança extends Ponto2D {
         this.z = z;
 
     }
+    @Override
     public String toString(){
         return super.toString()+" z:"+Float.toString(this.z);
     }
@@ -12,7 +13,7 @@ public class Ponto3DHerança extends Ponto2D {
     public float getZ(){
         return this.z;
     }
-
+    @Override
     public boolean inAxisX(){
         if(super.inAxisX()== true && this.z!=0){
             return true;
@@ -20,7 +21,7 @@ public class Ponto3DHerança extends Ponto2D {
         return false;
         
     }
-
+    @Override
     public boolean inAxisY(){
         if(super.inAxisY()== true && this.z!=0){
             return true;
@@ -33,14 +34,14 @@ public class Ponto3DHerança extends Ponto2D {
         }
         return false;  
     }
-
+    @Override
     public boolean inAxis(){
         if(super.inAxis()== true && this.z!=0){
             return true;
         }
         return false;  
     }
-
+    @Override
     public boolean isOrigin(){
         if(super.isOrigin() && this.z!=0){
             return true;
@@ -51,7 +52,7 @@ public class Ponto3DHerança extends Ponto2D {
     public void imprimirPonto(){
         System.out.printf("Ponto x: %f\nPonto y: %f \nPonto z: %f",this.getX(),this.getY(),this.z);
     }
-
+    
     public double distance(float x,float y,float z){
         float difX = this.getX() - x;
         float difY = this.getY() - y;
